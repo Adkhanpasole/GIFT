@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   noButton.addEventListener("click", function () {
     size += 10;
     yesButton.style.fontSize = `${size}px`;
-    if (size > 100) {
+
+    if (size === 130) {
+      noButton.classList.add("tumbled");
+    }
+    if (size > 150) {
       gifImage.src = "sad_cat.gif";
       document.querySelector("h1").textContent = "Oh no! 😿";
       buttonGroup1.style.display = "none";
@@ -33,5 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonGroup1.style.display = "block";
     buttonGroup2.style.display = "none";
     yesButton.style.fontSize = `1rem`;
+    size = 20;
   });
 });
